@@ -8,6 +8,10 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /docker_final_project
+COPY *.db ./
+
+ENV CGO_ENABLED=0 GOOS=linux GOARCH=amd64 
+
+RUN go build -o /docker_final_project
 
 CMD ["/docker_final_project"]
