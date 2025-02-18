@@ -3,11 +3,7 @@
 
 name: Go
 
-on:
-  push:
-    branches: [ "egor1221-patch-1" ]
-  pull_request:
-    branches: [ "egor1221-patch-1" ]
+on: push
 
 jobs:
 
